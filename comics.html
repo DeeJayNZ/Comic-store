@@ -1,0 +1,28 @@
+<!DOCTYPEHTML>
+	<html>
+		%include('shared/header.html')
+		%include('shared/navbar.html')
+		
+	<body bgcolor = "#66fcf1">	
+
+		%for comic in comic_list :					
+							  <div class="col s12 m7">
+		<h2 class="header">{{comic.comic_name}}</h2>
+		<div class="card horizontal cyan accent-1">
+		  <div class="card-image">
+			<img src="/picture/{{comic.comic_image}}" style="width:300px;height:400px;">
+		  </div>
+		  <div class="card-stacked">
+			<div class="card-content">
+			  <p> Stock {{comic.comic_stock}}</p>
+			  <p>{{comic.comic_description}}</p>
+			</div>
+			</div>
+		  </div>
+		</div>
+						%end
+
+	%include('shared/footer.html')
+
+	</body>
+	</html>
